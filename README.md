@@ -1,8 +1,8 @@
-# egeg
+# README Generator
 
 ## Description
 
-geg
+With this command line app, youll be able to generate README files for your projects in a dynamic way.
 
 ## Table of Contents 
 
@@ -11,8 +11,6 @@ geg
 * [Usage](#usage)
 
 * [Contributing](#contributing)
-
-* [Tests](#tests)
 
 * [Questions](#questions)
 
@@ -26,22 +24,11 @@ npm i
 
 ## Usage
 
+To use this app, you will need to have Node JS. First you will have to download the depndencies using "npm install", then you will have to run node index.js to start running the command line app. After the app starts running just answer the questions in the command line and your README will be generated.
 
 
-  
-## Contributing
-
-
-
-## Tests
-
-To run tests, run the following command:
-
-```
-npm test
-```
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at feefe. You can find more of my work at [adelfe](https://github.com/adelfe/).
+If you have any questions about the repo, open an issue or contact me directly at delalama.7@gmail.com. You can find more of my work at [adelalama](https://github.com/adelalama/).
 
