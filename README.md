@@ -2,7 +2,7 @@
 
 ## Description
 
-With this command line app, youll be able to generate README files for your projects in a dynamic way.
+With this command line app, youll be able to generate README files, like this one, for your projects in a dynamic way.
 
 ## Table of Contents 
 
