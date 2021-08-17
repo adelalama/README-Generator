@@ -1,9 +1,9 @@
 
-<h1>ReadME generator </h1>
+<h1>ReadME Generator </h1>
   
-![badge](https://img.shields.io/badge/license-Apache-brightgreen)<br />
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
-this app generates readmes for your projects
+With this command line app you will be able to generate ReadME files for your projects.
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
@@ -15,11 +15,11 @@ this app generates readmes for your projects
 ## Installation
 * npm i
 ## Usage
-* 
+* Open index.js and answer the questions asked in the terminal. 
 ## License
-![badge](https://img.shields.io/badge/license-Apache-brightgreen)
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 <br />
-This application is covered by the Apache license. 
+This application is covered by the MIT license. 
 ## Contributing
 
 ## Tests
