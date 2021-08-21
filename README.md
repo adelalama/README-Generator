@@ -1,4 +1,6 @@
 # READMe Generator
+
+![](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 ## Table of Contents:
 * [Description](#description)
 * [Usage](#usage)
@@ -7,7 +9,7 @@
 * [Testing](#testing)
 * [Contact](#contact)
 
-![](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
+
 ## Description:
 Command line application that lets you dynamically generate ReadMe files for your projects!
 ## Usage:

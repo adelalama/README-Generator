@@ -98,13 +98,14 @@ function createReadMe(input) {
   }
   filledReadMe.push(readmeTitle);
 
+   //license badge
+   let badge = `![](https://img.shields.io/badge/license-${readMeLicense.replace(/ /g, "%20")}-blue?style=flat-square)`;
+   filledReadMe.push(badge)
+ 
+
   //tabkle of contents
   readMeTableOfCont = `${tableOfContHead}\n* [Description](#description)\n* [Usage](#usage)\n* [License](#license)\n* [Installation](#installation)\n* [Testing](#testing)\n* [Contact](#contact)\n`;
   filledReadMe.push(readMeTableOfCont); 
-
-  //license badge
-  let badge = `![](https://img.shields.io/badge/license-${readMeLicense.replace(/ /g, "%20")}-blue?style=flat-square)`;
-  filledReadMe.push(badge)
 
   //desc
   if (input.description == '') {
