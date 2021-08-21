@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-
+//inquirer used to ask for user input
 inquirer
   .prompt([
     {
@@ -66,7 +66,7 @@ inquirer
     console.log(err)
   })
 
-
+//function that takes the answers from inquirer to create the readme
 function createReadMe(input) {
   let readMeTitle;
   let readMeDesc;
@@ -77,16 +77,18 @@ function createReadMe(input) {
   let readMeTest;
   let readMeGitHub;
   let readMecontact;
+  let readMeTableOfCont;
 
   let filledReadMe = [];
 
   const descriptionHead = "## Description:";
   const contactHead = '## Contact:';
   const usageHead = '## Usage:';
-  const dependenciesHead = '## Dependencies:';
+  const dependenciesHead = '## Installation:';
   const TestHead = '## Testing:';
   const gitHubHead = '## GitHub:';
   const licenseHead = '## License:'
+  const tableOfContHead = '## Table of Contents:'
 
   //title
   if (input.title == '') {
@@ -95,6 +97,10 @@ function createReadMe(input) {
     readmeTitle = `# ${input.title}`;
   }
   filledReadMe.push(readmeTitle);
+
+  //tabkle of contents
+  readMeTableOfCont = `${tableOfContHead}\n* [Description](#description)\n* [Usage](#usage)\n* [License](#license)\n* [Installation](#installation)\n* [Testing](#testing)\n* [Contact](#contact)\n`;
+  filledReadMe.push(readMeTableOfCont); 
 
   //license badge
   let badge = `![](https://img.shields.io/badge/license-${readMeLicense.replace(/ /g, "%20")}-blue?style=flat-square)`;
@@ -126,7 +132,7 @@ function createReadMe(input) {
   filledReadMe.push(readMeUsage);
 
   //license
-  readMeLicense = `\n${licenseHead}\nThis project is convered under the ${input.license}.`;
+  readMeLicense = `\n${licenseHead}\nThis project is convered under the ${input.license} License.`;
   filledReadMe.push(readMeLicense)
 
   //dependencies
@@ -151,20 +157,15 @@ function createReadMe(input) {
   readmeContact = `\n${contactHead}\nIf you have any questions or want to contact me, you can reach me at my GitHub: [${input.github}](https://github.com/${input.github}), or ${input.mail} by mail.`;
   filledReadMe.push(readmeContact);
 
-
-
-
-
-
-
-
-
   const finalReadMe = filledReadMe.join('\n')
+
+  //write readme file with information formatted from filledReadMe
 
   fs.writeFile("./README.md", finalReadMe, (err) => {
     if (err) {
       throw err;
     } else {
+      //log successful readme
       console.log("README file successfully created!");
     }
   });

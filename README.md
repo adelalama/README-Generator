@@ -1,16 +1,28 @@
-# TITLE
+# READMe Generator
+## Table of Contents:
+* [Description](#description)
+* [Usage](#usage)
+* [License](#license)
+* [Installation](#installation)
+* [Testing](#testing)
+* [Contact](#contact)
+
 ![](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 ## Description:
- Enter project description here.
+Command line application that lets you dynamically generate ReadMe files for your projects!
 ## Usage:
- Input project usage.
+Clone the repository and run index.js to initialize the application.
+
+Tutorial Gif: 
+
+![tutgif](/assets/tutorial.gif)
 
 ## License:
-This project is convered under the MIT.
-## Dependencies:
+This project is convered under the MIT License.
+## Installation:
 npm install
 ## Testing:
-npm test
+no tests
 
 ## Contact:
 If you have any questions or want to contact me, you can reach me at my GitHub: [adelalama](https://github.com/adelalama), or delalama.7@gmail.com by mail.
