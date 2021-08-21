@@ -1,10 +1,12 @@
 const fs = require('fs');
-const path = require('path');
 const inquirer = require('inquirer');
-const generateReadme = require('./readmeGenerator');
 
-// Array of inquirer questions for user input
-const answers = [
+
+inquirer 
+    .prompt([
+      
+    ])
+/*const answers = [
   {
     type: 'input',
     name: 'email',
@@ -79,3 +81,4 @@ function init() {
 }
 
 init();
+*/
