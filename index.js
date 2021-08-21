@@ -4,8 +4,23 @@ const inquirer = require('inquirer');
 
 inquirer 
     .prompt([
-      
+        {
+          type: "input",
+          message: "What is the title of your project?",
+          name: "title"
+        },
+        {
+          type: "input",
+          message: "What is a short description of your project?",
+          name: "description" 
+        }
     ])
+    .then((res)=>{
+      createReadMe(res);
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
 /*const answers = [
   {
     type: 'input',
@@ -82,3 +97,36 @@ function init() {
 
 init();
 */
+
+function createReadMe(input){
+  let readMeTitle;
+  let readMeDesc; 
+  let filledReadMe = [];
+  const descriptionHead = "## Description";
+
+  if (input.title == '') {
+    readmeTitle = '# TITLE';
+} else {
+    readmeTitle = `# ${input.title}`;
+}
+filledReadMe.push(readmeTitle);
+
+if (input.description == '') {
+  readmeDescription = `${descriptionHead}\n Enter project description here.`;
+} else {
+  readmeDescription = `${descriptionHead}\n${input.description}`;
+}
+filledReadMe.push(readmeDescription);
+
+const finalReadMe = filledReadMe.join('\n')
+
+
+fs.writeFile("./README.md", finalReadMe, (err) => {
+  if (err) {
+      throw err;
+  } else {
+      console.log("README file successfully created!");
+  }
+});
+
+}
